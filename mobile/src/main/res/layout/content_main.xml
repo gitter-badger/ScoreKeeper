@@ -15,5 +15,65 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/textViewP1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/textViewP2"
+        android:layout_alignBottom="@+id/textViewP1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player 1"
+        android:onClick="onPlayer1Click"
+        android:id="@+id/buttonP1"
+        android:layout_below="@+id/textViewP1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player 2"
+        android:onClick="onPlayer2Click"
+        android:id="@+id/buttonP2"
+        android:layout_alignTop="@+id/buttonP1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <android.support.v7.widget.RecyclerView
+    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gameList"
+        android:layout_below="@+id/buttonP1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Game"
+        android:id="@+id/buttonNewGame"
+        android:layout_above="@+id/gameList"
+        android:layout_centerHorizontal="true"
+        android:onClick="onNewGameClick" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewGamesPlayed"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/buttonNewGame"
+        android:layout_alignStart="@+id/buttonNewGame" />
 </RelativeLayout>
